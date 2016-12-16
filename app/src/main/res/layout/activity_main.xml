@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.prezes.whatstheweather.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside"
+        android:background="@drawable/foto"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false" />
+
+    <TextView
+        android:text="Enter a city..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginTop="105dp"
+        android:id="@+id/getCityId"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:hint="City..." />
+
+    <Button
+        android:text="What's the weather?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_below="@+id/getCityId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:onClick="findWeather" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/weatherDetailsId"
+        android:layout_marginBottom="100dp"
+        android:textSize="20dp"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>
